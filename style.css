@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+
+:root{
+
+    /* Primary */
+    --lightRed: hsl(0, 100%, 67%);
+    --orangeyYellow: hsl(39, 100%, 56%);
+    --greenTeal: hsl(166, 100%, 37%);
+    --cobaltBlue: hsl(234, 85%, 45%);
+
+    /* Gradients */
+    --lightSlateBlue: hsl(252, 100%, 67%); /*(background)*/
+    --lightRoyalBlue: hsl(241, 81%, 54%);  /*(background)*/
+    --violetBlue: hsla(256, 72%, 46%, 1);  /*(circle)*/
+    --persianBlue: hsla(241, 72%, 46%, 0); /*(circle)*/
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --paleBlue: hsla(0, 0%, 81%, 0.514);
+    --lightLavender: hsl(245, 6%, 59%);
+    --darkGrayBlue: hsl(224, 30%, 27%);
+
+    /* fonts */
+    --font: "Hanken Grotesk", sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--font);
+}
+.container{
+    width: 375px;
+    margin: 0 auto;
+    background-color: var(--white);
+}
+
+/*------header-----*/
+header{
+    width: 100%;
+    height: 355px;
+    background: linear-gradient( to bottom, var(--lightSlateBlue) , var(--lightRoyalBlue));
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    text-align: center;
+    padding: 25px 30px 15px 30px;
+}
+header h4{
+    color: var(--lightLavender);
+    font-weight: 700;
+    font-size: 18px;
+}
+header .circle{
+    background-color: aliceblue;
+    width: 138px;
+    height: 138px;
+    margin: 25px auto 10px auto;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, var(--violetBlue), var(--persianBlue));
+}
+header .circle h1{
+    color: var(--white);
+    font-weight: 800;
+    font-size: 3.5rem;
+    position: relative;
+    top: 25px;
+}
+header .circle h5{
+    color: var(--lightLavender);
+    position: relative;
+    top: 23px;
+    font-weight: 700;
+}
+header h1{
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 800;
+}
+header p{
+    color: var(--lightLavender);
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 17px;
+}
+
+/*-----summary------*/
+.summary{
+    padding: 20px 50px 20px 50px;
+}
+.summary div{
+    display: flex;
+    justify-content: space-between;
+    padding: 19px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.summary h2{
+    color: var(--darkGrayBlue);
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: relative;
+    right: 20px;
+    margin-bottom: 20px;
+}
+.summary h3{
+    font-size: 1rem;
+    font-weight: 800;
+    position: relative;
+    right: 45px;
+}
+.summary p{
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--lightLavender);
+}
+.summary b{
+    color: var(--darkGrayBlue);
+    font-weight: 800;
+}
+
+.summary .reaction{
+    background-color: hsla(0, 100%, 67%, 0.4);
+}
+.summary .reaction h3{
+    color: var(--lightRed);
+}
+
+.summary .memory{
+    background-color: hsla(39, 100%, 56%, 0.4);
+}
+.summary .memory h3{
+    color: var(--orangeyYellow);
+}
+
+.summary .verbal{
+    background-color: hsla(166, 100%, 37%, 0.4);
+}
+.summary .verbal h3{
+    color: var(--greenTeal);
+    right: 53px;
+}
+
+.summary .visual{
+    background-color: hsla(234, 85%, 45%, 0.4);
+    margin-bottom: 0;
+}
+.summary .visual h3{
+    color: var(--cobaltBlue);
+    right: 53px;
+}
+
+
+/*-----button-----*/
+.button{
+    text-align: center;
+}
+button{
+    width: 300px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    background-color: var(--darkGrayBlue);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin: 10px 0 40px 0;
+}
+button:hover{
+    background: linear-gradient(to bottom, var(--lightSlateBlue) , var(--lightRoyalBlue) );
+}
+
+
+/*--------MQ-------*/
+@media screen and (min-width: 687px) {
+    .container{
+        display: flex;
+        width: 735px;
+        height: 450px;
+        margin: 30px auto;
+    }
+    header{
+        width: 367px;
+        height: 100%;
+        border-radius: 25px;
+    }
+    header h4{
+        font-size: 22px;
+        margin: 10px 0;
+    }
+    header .circle{
+        width: 160px;
+        height: 160px;
+        margin-bottom: 20px;
+    }
+    header p{
+        margin-top: 30px;
+    }
+    .summary h3{
+        right: 73px;
+    }
+    .summary .verbal h3{
+        right: 80px;
+    }
+    .summary .visual h3{
+        right: 80px;
+    }
+
+
+
+
+}
+
+
+
+/*--------footer--------*/
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    color: var(--darkGrayBlue); 
+    font-weight: 800;
+}
+.attribution a { 
+    color: var(--lightRoyalBlue);
+    text-decoration: none;
+    font-weight: 500;
+}
